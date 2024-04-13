@@ -1,26 +1,47 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 126, in script call
+  File "game/script.rpy", line 129, in script call
     call nightmare_summoned from _call_nightmare_summoned
-  File "game/nightmare_summon.rpy", line 37, in script
-    jump nm_work
-ScriptError: could not find label 'nm_work'.
+  File "game/nightmare_summon.rpy", line 4, in script
+    menu:
+OSError: Couldn't find file 'nightmare.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 126, in script call
+  File "game/script.rpy", line 129, in script call
     call nightmare_summoned from _call_nightmare_summoned
-  File "game/nightmare_summon.rpy", line 37, in script
-    jump nm_work
-  File "D:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1698, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\Program Files\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'nm_work'.
+  File "game/nightmare_summon.rpy", line 4, in script
+    menu:
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1618, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 1109, in menu
+    rv = renpy.store.menu(new_items)
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\exports.py", line 1364, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\display\core.py", line 3022, in interact_core
+    renpy.audio.audio.periodic()
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\audio\audio.py", line 1205, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\audio\audio.py", line 1183, in periodic_thread_main
+    periodic_pass()
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\audio\audio.py", line 1125, in periodic_pass
+    c.periodic()
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'nightmare.mp3'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 LudumDare55 1.0
-Sat Apr 13 19:50:54 2024
+Sat Apr 13 21:43:49 2024

@@ -90,6 +90,7 @@ label grimoire:
                 "Yes":
                     refi "Okay, let's summon Frank Bankmayer."
                     $frank = True
+                    play music "frank.mp3"
                     call bankmayer_summoned from _call_bankmayer_summoned
                 "No":
                     refi "Alright, let's check out the others first."
@@ -105,6 +106,7 @@ label grimoire:
                     narrator "It seems, that different offerings have a different effects on the key in the hole."
                     narrator "You gather, that your key needs to be a creature with red fur, long claws, round eyes, long hair and a tail."
                     $the_word = True
+                    play music "narrator.mp3"
                     call narrator_summoned from _call_narrator_summoned
                 "No":
                     narrator "Fine then. I guess you don't want to play the game."
@@ -123,6 +125,7 @@ label grimoire:
             menu:
                 "Yes":
                     refi "Alright, let me summon it."
+                    play music "Nightmare_Machine.mp3"
                     call nightmare_summoned from _call_nightmare_summoned
                     $nightmare_machine = True
                 "No":
@@ -135,6 +138,7 @@ label grimoire:
             menu:
                 "Yes":
                     refi "Alright, you wanted it..."
+                    play music "dad.mp3"
                     call dad_summoned from _call_dad_summoned
                     $dad = True
                 "No":
@@ -151,6 +155,7 @@ label grimoire:
             menu:
                 "Yes":
                     $the_quill = True
+                    play music "quill.mp3"
                     call the_quill_summoned from _call_the_quill_summoned
                 "No":
                     refi "Alright, let's check out the others first."
