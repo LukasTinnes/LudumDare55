@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 126, in script call
+    call nightmare_summoned from _call_nightmare_summoned
+  File "game/nightmare_summon.rpy", line 37, in script
+    jump nm_work
+ScriptError: could not find label 'nm_work'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 126, in script call
+    call nightmare_summoned from _call_nightmare_summoned
+  File "game/nightmare_summon.rpy", line 37, in script
+    jump nm_work
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\ast.py", line 1698, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\Program Files\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'nm_work'.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.2.1.24030407
+LudumDare55 1.0
+Sat Apr 13 19:50:54 2024
